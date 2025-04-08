@@ -1,0 +1,130 @@
+/* Set the background color to navy blue */
+body {
+    background-color: #274653;
+    color: white; /* Ensure text is readable on a dark background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Parallax container */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Parallax header */
+.parallax-header {
+    background-image: url('header-background.jpg'); /* Replace with your image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: Full viewport height */
+}
+
+/* Center the page title */
+.page-title {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    color: white;
+}
+
+/* Center the logo */
+.page-logo {
+    display: block;
+    margin: 0 auto; /* Centers the logo horizontally */
+    width: 500px; /* Optional: Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the content section */
+.content {
+    background-color: white;
+    color: black;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the screenshots section */
+.screenshots {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.screenshots h2 {
+    color: #274653;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for screenshots */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the footer */
+.footer {
+    background-color: #1f3a44; /* Darker shade of navy */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the navigation links */
+.navigation {
+    margin-top: 20px; /* Adds spacing between the logo and the navigation bar */
+    font-size: 1.2em; /* Make the text slightly larger */
+    text-align: center;
+    background-color: #1f3a44; /* Darker shade of navy */
+    color: white;
+    padding: 10px 0;
+    position: sticky; /* Keeps the navigation visible when scrolling */
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(-20px); /* Slide up effect */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
+}
+
+.navigation.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Increase spacing between links */
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
